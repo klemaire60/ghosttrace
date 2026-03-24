@@ -1,0 +1,12 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ghosttrace"
+version = "0.1.0"
+requires-python = ">= 3.11"
+dependencies = ["click"]
+
+[project.scripts]
+ghosttrace = "ghosttrace.cli:main"
