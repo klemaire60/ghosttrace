@@ -6,7 +6,12 @@ build-backend = "hatchling.build"
 name = "ghosttrace"
 version = "0.1.0"
 requires-python = ">= 3.11"
-dependencies = ["click"]
+dependencies = [
+	"click",
+	"httpx",
+	"dnspython",
+	"python-whois",
+	]
 
 [project.scripts]
 ghosttrace = "ghosttrace.cli:main"
