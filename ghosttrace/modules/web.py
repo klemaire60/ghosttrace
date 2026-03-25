@@ -37,7 +37,7 @@ def whois_lookup(domain):
 	keys = ["domain_name", "registrar", "creation_date", "expiration_date", "name_servers"]
 	return {k: str(data.get(k,"none")) for k in keys}
 
-def http_headers(domain):
+def http_headers_lookup(domain):
     try:
         response = httpx.get("https://" + domain, timeout=5)
         protocol = "https"
@@ -71,5 +71,5 @@ if __name__ == "__main__":
 		print(items)
 
 	print('===== HTTP HEADERS =====')
-	for items in http_headers(domain).items():
+	for items in http_headers_lookup(domain).items():
 		print(items)
