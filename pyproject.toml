@@ -11,7 +11,8 @@ dependencies = [
 	"httpx",
 	"dnspython",
 	"python-whois",
+	"rich",
 	]
-
+ 
 [project.scripts]
 ghosttrace = "ghosttrace.cli:main"
