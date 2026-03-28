@@ -34,8 +34,11 @@ def whois_lookup(domain):
 	except Exception:
 		pass
 	
-	keys = ["domain_name", "registrar", "creation_date", "expiration_date", "name_servers"]
-	return {k: str(data.get(k,"none")) for k in keys}
+	keys = ["domain_name", "registrar", "creation_date", "expiration_date"]
+	final_data = {k: str(data.get(k, "none")) for k in keys}
+	final_data["name_servers"] = data.get("name_servers", [])
+	return final_data
+
 
 def http_headers_lookup(domain):
     try:
