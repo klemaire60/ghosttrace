@@ -128,13 +128,4 @@ Chaque module est indépendant et testable isolément. Le core engine gère les 
 - [ ] CI GitHub Actions
 
 ---
-
-## Environnement recommandé
-
-- Debian / Kali Linux (VM ou natif)
-- Python 3.11+
-- VSCode + Remote SSH
-
----
-
 *Projet développé dans le cadre d'un apprentissage de la cybersécurité offensive.*
